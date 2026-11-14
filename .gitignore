@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+data/*
+!data/.gitkeep
+data/indodax_dry_run_state.json
+data/indodax_dry_run_state.tmp
+data/indodax_book_snapshots.json
+output/*
+!output/.gitkeep
+output/indodax_backtest.json
+public/indodax_backtest.json
+indodax-dry-run-*.json
+UTS_*.html
+UTS 25110200023 Ursulla Ningtyas Kirey Ruu.html
+UAS_Ursulla NIngtyas Kirey Ruu_25110200023.html
+__pycache__/
