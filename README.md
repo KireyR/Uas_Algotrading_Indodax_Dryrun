@@ -33,9 +33,15 @@ Aset: dari saham ke kripto Indodax IDR spot.
 Eksekusi dan biaya: fill di bid/ask dengan kedalaman order book, fee taker, estimasi spread dari snapshot order book (3 snapshot), minimum order Rp25.000.
 Risiko: batas rugi harian dan kill switch.
 5. Isi repo
-dashboard.html: dashboard offline mandiri
-hitung_ulang.py: menghitung ulang angka dashboard dari data tertanam
-.env.example: contoh variabel lingkungan, tanpa secret
+- `dashboard.html`: dashboard UAS offline mandiri (versi final UAS)
+- `hitung_ulang.py`: menghitung ulang metrik dashboard dari data yang tertanam di dashboard
+- `.env.example`: contoh variabel lingkungan, tanpa secret
+- `vercel.json`: konfigurasi cron yang menunjuk ke /api/tick. Endpoint /api/tick TIDAK ada di repo ini, jadi bot Vercel tidak berjalan.
+- `run_all.py`, `universe.csv`, `requirements.txt`: pipeline UTS (saham Kompas100, data Yahoo). BUKAN pipeline UAS Indodax.
+- `UTS_*.html`, `UTS ... .html`: dashboard UTS (arsip).
+- `UAS_Ursulla_NIngtyas...html`: versi awal dashboard UAS sebelum dilengkapi.
+
+Belum ada di repo: kode yang mengunduh data Indodax dan menjalankan backtest UAS, source /api/tick, dan folder logs/. Angka backtest UAS di dashboard tertanam dari proses riset sebelumnya yang kodenya tidak disertakan di repo ini, sehingga tidak dapat direproduksi dari data mentah oleh pihak lain. hitung_ulang.py hanya memverifikasi konsistensi hitungan dari data tertanam itu.
 
 Belum ada di repo: source code bot (/api/tick), folder logs/, dan source backtest. Seluruhnya belum disertakan.
 
